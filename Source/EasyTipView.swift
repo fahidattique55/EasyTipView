@@ -259,12 +259,12 @@ open class EasyTipView: UIView {
         public init() {}
     }
     
-    open enum Content: CustomStringConvertible {
+    public enum Content: CustomStringConvertible {
         
         case text(String)
         case view(UIView)
         
-        var description: String {
+        public var description: String {
             switch self {
             case .text(let text):
                 return "text : '\(text)'"
@@ -297,7 +297,7 @@ open class EasyTipView: UIView {
     fileprivate weak var delegate: EasyTipViewDelegate?
     fileprivate var arrowTip = CGPoint.zero
     fileprivate(set) open var preferences: Preferences
-    open let content: Content
+    public let content: Content
     
     // MARK: - Lazy variables -
     
